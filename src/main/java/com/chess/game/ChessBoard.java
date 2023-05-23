@@ -2,7 +2,7 @@ package com.chess.game;
 
 import com.chess.piece.Piece;
 
-import java.util.Set;
+import java.util.List;
 
 public class ChessBoard {
     private static final int A = 65;
@@ -18,7 +18,7 @@ public class ChessBoard {
         }
     }
 
-    public Set<String> findAllValidMovements(Piece piece, Position position) {
+    public List<String> findAllValidMovements(Piece piece, Position position) {
         return piece.getAllValidMovements(board, position);
     }
 }

@@ -2,8 +2,8 @@ package com.chess.piece;
 
 import com.chess.game.Position;
 
-import java.util.Set;
+import java.util.List;
 
 public interface Piece {
-     Set<String> getAllValidMovements(String[][] board, Position currentPosition);
+    List<String> getAllValidMovements(String[][] board, Position currentPosition);
 }

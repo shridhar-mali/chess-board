@@ -3,8 +3,8 @@ package com.chess.game;
 import com.chess.exception.PieceNotFoundException;
 import com.chess.piece.Piece;
 
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class ChessGame {
     private final ChessBoard chessBoard;
@@ -16,10 +16,10 @@ public class ChessGame {
         this.pieceMap = map;
     }
 
-    public Set<String> findAllValidMovements(String input) {
+    public List<String> findAllValidMovements(String input) {
         String pieceType = input.substring(0, input.indexOf(",")).toUpperCase();
         String currentPosition = input.substring(input.indexOf(", ") + 2, input.length());
-        if(!pieceMap.containsKey(pieceType)) {
+        if (!pieceMap.containsKey(pieceType)) {
             throw new PieceNotFoundException(String.format("pieceType %s is not found", pieceType));
         }
         return chessBoard.findAllValidMovements(pieceMap.get(pieceType), new Position(currentPosition));

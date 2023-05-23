@@ -2,16 +2,16 @@ package com.chess.piece;
 
 import com.chess.game.Position;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pawn implements Piece {
 
     @Override
-    public Set<String> getAllValidMovements(String[][] board, Position currentPosition) {
-        Set<String> validPositions = new HashSet<>();
-        if(currentPosition.getCurrentRow() != 0) {
-            validPositions.add(board[currentPosition.getCurrentRow()-1][currentPosition.getCurrentColumn()]);
+    public List<String> getAllValidMovements(String[][] board, Position currentPosition) {
+        List<String> validPositions = new ArrayList<>();
+        if (currentPosition.getCurrentRow() != 0) {
+            validPositions.add(board[currentPosition.getCurrentRow() - 1][currentPosition.getCurrentColumn()]);
         }
         return validPositions;
     }

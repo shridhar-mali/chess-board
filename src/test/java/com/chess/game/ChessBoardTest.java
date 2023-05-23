@@ -3,7 +3,7 @@ package com.chess.game;
 import com.chess.piece.Pawn;
 import org.junit.jupiter.api.Test;
 
-import java.util.Set;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,7 +14,7 @@ class ChessBoardTest {
     @Test
     void shouldFindAllValidPositionsForPawn() {
 
-        Set<String> allValidMovements = chessBoard.findAllValidMovements(new Pawn(), new Position("E6"));
+        List<String> allValidMovements = chessBoard.findAllValidMovements(new Pawn(), new Position("E6"));
 
         assertThat(allValidMovements.size()).isEqualTo(1);
         assertThat(allValidMovements).containsExactly("E7");

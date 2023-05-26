@@ -1,6 +1,6 @@
 package com.chess.game;
 
-import com.chess.piece.Pawn;
+import com.chess.piece.PawnMovement;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -14,7 +14,7 @@ class ChessBoardTest {
     @Test
     void shouldFindAllValidPositionsForPawn() {
 
-        List<String> allValidMovements = chessBoard.findAllValidMovements(new Pawn(), new Position("E6"));
+        List<String> allValidMovements = chessBoard.findAllValidMovements(new PawnMovement(), new Position("E6"));
 
         assertThat(allValidMovements.size()).isEqualTo(1);
         assertThat(allValidMovements).containsExactly("E7");

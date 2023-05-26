@@ -5,7 +5,7 @@ import com.chess.game.Position;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pawn implements Piece {
+public class PawnMovement implements Movement {
 
     @Override
     public List<String> getAllValidMovements(String[][] board, Position currentPosition) {

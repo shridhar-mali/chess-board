@@ -5,7 +5,7 @@ import com.chess.game.Position;
 import java.util.ArrayList;
 import java.util.List;
 
-public class King implements Piece {
+public class KingMovement implements Movement {
     @Override
     public List<String> getAllValidMovements(String[][] board, Position currentPosition) {
         List<String> validPositions = new ArrayList<>();

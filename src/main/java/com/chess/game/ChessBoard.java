@@ -1,6 +1,6 @@
 package com.chess.game;
 
-import com.chess.piece.Piece;
+import com.chess.piece.Movement;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class ChessBoard {
         }
     }
 
-    public List<String> findAllValidMovements(Piece piece, Position position) {
-        return piece.getAllValidMovements(board, position);
+    public List<String> findAllValidMovements(Movement movement, Position position) {
+        return movement.getAllValidMovements(board, position);
     }
 }

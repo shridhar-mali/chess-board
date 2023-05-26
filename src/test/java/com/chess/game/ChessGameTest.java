@@ -2,20 +2,16 @@ package com.chess.game;
 
 
 import com.chess.exception.PieceNotFoundException;
-import com.chess.piece.King;
-import com.chess.piece.Pawn;
-import com.chess.piece.Queen;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
 class ChessGameTest {
 
-    private ChessGame chessGame = new ChessGame(new ChessBoard(), Map.of("PAWN", new Pawn(), "KING", new King(), "QUEEN", new Queen()));
+    private ChessGame chessGame = new ChessGame(new ChessBoard());
 
     @Test
     void shouldThrowExceptionWhenPieceNotFound() {

@@ -8,14 +8,14 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-class PawnTest {
+class PawnMovementTest {
 
-    private Pawn pawn = new Pawn();
+    private PawnMovement pawnMovement = new PawnMovement();
 
     @Test
     void shouldReturnAllMovementsForG1Position() {
 
-        List<String> allValidMovements = pawn.getAllValidMovements(board(), new Position("G1"));
+        List<String> allValidMovements = pawnMovement.getAllValidMovements(board(), new Position("G1"));
 
         assertThat(allValidMovements.size()).isEqualTo(1);
         assertThat(allValidMovements).containsExactly("G2");
@@ -24,7 +24,7 @@ class PawnTest {
     @Test
     void shouldReturnAllMovementsForD5Position() {
 
-        List<String> allValidMovements = pawn.getAllValidMovements(board(), new Position("D5"));
+        List<String> allValidMovements = pawnMovement.getAllValidMovements(board(), new Position("D5"));
 
         assertThat(allValidMovements.size()).isEqualTo(1);
         assertThat(allValidMovements).containsExactly("D6");

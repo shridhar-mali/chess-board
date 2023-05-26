@@ -7,27 +7,27 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class KingTest {
+class KingMovementTest {
 
-    private King king = new King();
+    private KingMovement kingMovement = new KingMovement();
 
     @Test
     void shouldReturnAllValidMovementsForPositionA1() {
-        List<String> allValidMovements = king.getAllValidMovements(board(), new Position("A1"));
+        List<String> allValidMovements = kingMovement.getAllValidMovements(board(), new Position("A1"));
 
         assertThat(allValidMovements).containsExactlyInAnyOrder("B1", "A2", "B2");
     }
 
     @Test
     void shouldReturnAllValidMovementsForPositionC3() {
-        List<String> allValidMovements = king.getAllValidMovements(board(), new Position("C3"));
+        List<String> allValidMovements = kingMovement.getAllValidMovements(board(), new Position("C3"));
 
         assertThat(allValidMovements).containsExactlyInAnyOrder("B3", "D3", "C2", "C4", "B2", "D4", "D2", "B4");
     }
 
     @Test
     void shouldReturnAllValidMovementsForPositionD8() {
-        List<String> allValidMovements = king.getAllValidMovements(board(), new Position("D8"));
+        List<String> allValidMovements = kingMovement.getAllValidMovements(board(), new Position("D8"));
 
         assertThat(allValidMovements).containsExactlyInAnyOrder("C8", "E8", "C7", "D7", "E7");
     }
